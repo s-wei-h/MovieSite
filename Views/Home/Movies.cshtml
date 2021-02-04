@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.title = "All Movies";
+}
+
+@model IEnumerable<MovieSite.Models.MovieModel>
+
+<h1>@ViewBag.title</h1>
+
+<!--Table for all movies added in this session-->
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Rating</th>
+            <th>Edited</th>
+            <th>Lent To</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (MovieSite.Models.MovieModel movie in Model)
+        {
+            @if (movie.title != "Independence Day")
+            {
+                <tr>
+                    <td>@movie.title</td>
+                    <td>@movie.category</td>
+                    <td>@movie.year</td>
+                    <td>@movie.director</td>
+                    <td>@movie.rating</td>
+                    <td>@movie.edited</td>
+                    <td>@movie.lent_to</td>
+                    <td>@movie.notes</td>
+                </tr>
+                }
+        }
+    </tbody>
+</table>

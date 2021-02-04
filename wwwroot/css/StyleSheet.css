@@ -1,0 +1,15 @@
+﻿body {
+}
+
+table, th, td {
+    border: solid black 3px;
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background: cyan;
+}
